@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliseoDev</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"> <!-- Link to your CSS file -->
+  <style>
+    .navbar {
+      background-color: transparent; /* make the navbar transparent */
+    }
+    .navbar-brand,
+    .nav-link {
+      color: rgba(255, 255, 255, 0.774) !important; /* change text color to black */
+    }
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: #00000070 !important; /* change text color to blue on hover */
+    }
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* place the video behind other content */
+    }
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: 50px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .centered-text {
+        
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.808);
+    }
+    .social-icons {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+    .social-icons a {
+      color: rgb(255, 255, 255);
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    .button {
+      background-color: #0000007c;
+      color: rgba(255, 255, 255, 0.842);
+      padding: 15px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgb(20, 7, 0);
+    }
+    .button:hover {
+      background-color: #e4e7ff3d;
+    }
+    .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid rgba(255, 255, 255, 0.651);
+      margin-left: 5px;
+      
+    }
+    
+    body {
+    background-image: url("assets/Business Freelancer (12).png");
+    background-size: 100%
+
+    /* Additional background properties can be added here */
+    
+}
+section {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    h2 {
+      cursor: pointer;
+    }
+    div {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+    div {
+  display: block; /* Change 'none' to 'block' */
+}
+  /* Styling for the dropdown content */
+  .dropdown-content {
+      display: none; /* Initially hide the dropdown content */
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out; /* Smooth transition effect */
+      max-height: 0; /* Initially set max-height to 0 */
+    }
+
+    /* Styling for the dropdown toggle */
+    .dropdown-toggle {
+      cursor: pointer;
+    }
+
+    /* Styling for the dropdown toggle when active */
+    .dropdown-toggle.active + .dropdown-content {
+      display: block; /* Show the dropdown content when the toggle is active */
+      max-height: 200px; /* Set a maximum height for the dropdown content */
+    }
+    
+    /* Styling for the section headings */
+    h1, h2 {
+      color: white; /* Set text color to white */
+    }
+  
+    .dropdown-content {
+      display: none; /* Initially hide the dropdown content */
+      overflow: hidden;
+      transition: max-height 1s ease-in-out; /* Smooth transition effect */
+      max-height: 0; /* Initially set max-height to 0 */
+      color: white; /* Set text color to white */
+    }
+    .dropdown-toggle:hover + .dropdown-content {
+      display: block; /* Show the dropdown content when hovered over */
+      max-height: 200px; /* Set a maximum height for the dropdown content */
+    }
+      /* Style for dropdowns */
+      .dropdown-toggle {
+      cursor: pointer;
+      color: rgb(255, 255, 255); /* Initial color */
+      transition: color 0.3s; /* Smooth transition */
+    }
+
+    /* Change color to white on hover */
+    .dropdown-toggle:hover {
+      color: white;
+    }
+
+    /* Hide dropdown content by default */
+    .dropdown-content {
+      display: none;
+      background-color: #000000;
+      border: 1px solid #ccc;
+      border-top: none;
+      padding: 10px;
+      margin-top: 5px; /* Add some space between dropdowns */
+    }
+
+    /* Show dropdown content when dropdown is active */
+    .dropdown-toggle.active + .dropdown-content {
+      display: block;
+    }
+    .btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  color: #155724; /* Green color */
+  background-color: #fff;
+  border-color: #155724;
+}
+
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: 'nexa';">
+    <a class="navbar-brand" href="index.html" style="color: rgb(255, 255, 255); margin-right: 40px;">Eliseo Rodriguez</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="portfolio.html" style="color: rgb(255, 255, 255);">Portfolio</a>
+            </li>
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="aboutme.html" style="color: rgb(255, 255, 255); ">About Me</a>
+            </li>
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="inquiry.html" style="color: rgb(255, 255, 255);">Inquiries</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <!-- LinkedIn Icon -->
+          
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+  <section>
+    <div style="width: 80%; margin: 0 auto; background-color: rgba(0, 0, 0, 0.151); padding: 20px;">
+      <section style="color: white;">
+        <h1 style="font-family:'Fulls'; transition: transform 0.3s;">About Me</h1>
+        <p>Hello! I'm Eliseo, a dedicated professional specializing in the creation and management of custom websites using the most up-to-date Front-End technologies. Earlier this year I graduated with a certification in Full Stack Software Engineering from Southern Methodist University (SMU). I am passionate about crafting web applications tailored to client specifications, creating custom websites, creating Shopify stores, managing web platforms, and continually refining web solutions for optimal performance. I approach web development as an art form, driven by a passion for wanting to become next level. My goal is to collaborate with forward-thinking individuals/organizations and to grow together as a team.</p>
+        <details style="font-family: 'Full'; transition: max-height 1.5s ease;">
+            <summary>What I am Proficient in:</summary>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Custom Coded Shopify</li>
+                <li>Bootstrap</li>
+                <li>Tailwind</li>
+            </ul>
+        </details>
+    </section>
+      </div>
+        <!-- Resume and Portfolio buttons -->
+        <div class="text-center mt-4">
+    
+          <a href="portfolio.html" class="btn btn-outline-light" target="_blank">Portfolio</a>
+        </div>
+   
+
+    
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

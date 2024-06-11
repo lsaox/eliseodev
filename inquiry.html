@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliseoDev</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"> <!-- Link to your CSS file -->
+  <style>
+    .navbar {
+      background-color: transparent; /* make the navbar transparent */
+    }
+    .navbar-brand,
+    .nav-link {
+      color: rgba(0, 0, 0, 0.692) !important; /* change text color to black */
+    }
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: #ffffff !important; /* change text color to blue on hover */
+    }
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* place the video behind other content */
+    }
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .centered-text {
+        
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgba(0, 0, 0, 0.808);
+    }
+    .social-icons {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+    .social-icons a {
+      color: rgb(255, 255, 255);
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    .button {
+      background-color: #000000c9;
+      color: rgba(255, 255, 255, 0.842);
+      padding: 15px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(46, 2, 2, 0.829);
+    }
+    .button:hover {
+      background-color: #000000;
+    }
+    .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid white;
+      margin-left: 5px;
+    }
+    body {
+    background-image: url("assets/eliseosface2.png");
+    background-size: 100%
+
+    /* Additional background properties can be added here */
+    
+}
+  </style>
+  <script type="text/javascript" src="https://form.jotform.com/jsform/241578348216058"></script>
+</head>
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: 'nexa';">
+    <a class="navbar-brand" href="index.html" style="color: rgb(255, 255, 255); margin-right: 40px;">Eliseo Rodriguez</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="portfolio.html" style="color: rgb(255, 255, 255);">Portfolio</a>
+            </li>
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="aboutme.html" style="color: rgb(255, 255, 255); ">About Me</a>
+            </li>
+            <li class="nav-item" style="margin-right: 40px;">
+                <a class="nav-link" href="inquiry.html" style="color: rgb(255, 255, 255);">Inquiries</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <!-- LinkedIn Icon -->
+          
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<h1 style="text-align: center; font-family:Fulls ;" >Let's Work Together</h1> <!-- Add this line -->
+
+<script src="https://cdn02.jotfor.ms/static/prototype.forms.js?v=3.3.54539" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/static/jotform.forms.js?v=3.3.54539" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.54539" type="text/javascript" defer></script>
+<script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.54539" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.newPaymentUI = true;
+	JotForm.replaceTagTest = true;
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+	JotForm.isFullSource = true;
+
+	JotForm.init(function(){
+	/*INIT-START*/
+      JotForm.setPhoneMaskingValidator( 'input_4_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_5').setAttribute('tabindex',0);
+	/*INIT-END*/
+	});
+
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,null,{"description":"","name":"fullName","qid":"2","text":"Full Name","type":"control_fullname"},{"description":"","name":"emailAddress","qid":"3","subLabel":"example@example.com","text":"Email Address","type":"control_email"},{"description":"","name":"phoneNumber","qid":"4","text":"Phone Number","type":"control_phone"},{"description":"","name":"howCan","qid":"5","subLabel":"","text":"How can I help you?","type":"control_textbox"},{"description":"","name":"businessType","qid":"6","text":"Business Type","type":"control_radio"},null,null,null,null,null,{"description":"","name":"preferredCommunication","qid":"12","text":"Preferred Communication Method","type":"control_radio"},{"description":"","name":"preferredPayment","qid":"13","text":"Preferred Payment Method","type":"control_radio"},null,{"name":"submit","qid":"15","text":"Submit","type":"control_button"}]);}, 20); 
+</script>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=73932fc
+"/>
+<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link id="custom-font" type="text/css" rel="stylesheet" href="//cdn.jotfor.ms/fonts/?family=Inter" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.54539&themeRevisionID=65660e4b326633110492e01a"/>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.54539" />
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.54539" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/.form-all {font-family: Inter, sans-serif;}.form-label.form-label-auto {
+display: block;
+float: none;
+text-align: left;
+width: 100%;}.form-line { margin-top: 12px; margin-bottom: 12px;}.form-all {max-width: 752px;width: 100%;}.form-label.form-label-left,.form-label.form-label-right,.form-label.form-label-left.form-label-auto,.form-label.form-label-right.form-label-auto {width: 230px;}.form-all {font-size: 16px}
+    .supernova {
+        background-color: #F3F3FE;
+    }
+    .supernova body {
+        background: transparent;
+    }
+        
+        .supernova .form-all, .form-all {
+            background-color: #FFFFFF;
+        }
+        
+    .form-all {
+      color: #2C3345;
+    }
+    .form-header-group .form-header {
+      color: #2C3345;
+    }
+    .form-header-group .form-subHeader {
+      color: #2C3345;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #2C3345;
+    }
+    .form-sub-label {
+      color: #2C3345;
+    }
+        
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #FFFFFF;
+    }
+        
+    .form-line-error {
+      overflow: hidden;
+      transition: none;
+      background-color: #FFF4F4;
+    }
+
+    .form-line-error .form-error-message {
+      background-color: #DC2626;
+      clear: both;
+      float: none;
+    }
+
+    .form-line-error .form-error-arrow {
+      border-bottom-color: #FF3200;
+    }
+
+    .form-line-error input:not(#coupon-input),
+    .form-line-error textarea,
+    .form-line-error .form-validation-error {
+      border: 1px solid #c61515;
+      box-shadow: 0 0 3px #c61515;
+    }
+        
+    
+    .supernova {
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-attachment: scroll;
+      background-position: center top;
+    }
+        
+
+    .supernova, #stage {
+        background-image: none;
+    }
+            
+      .form-all {
+        background-image: none;
+      }
+            /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/241578348216058" method="post" name="form_241578348216058" id="241578348216058" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="241578348216058" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1717904548806" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1717904548806" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li class="form-line jf-required" data-type="control_fullname" id="id_2"><label class="form-label form-label-top form-label-auto" id="label_2" for="first_2" aria-hidden="false"> Full Name<span class="form-required">*</span> </label>
+        <div id="cid_2" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_2" name="q2_fullName[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 given-name" size="10" data-component="first" aria-labelledby="label_2 sublabel_2_first" required="" value="" /><label class="form-sub-label" for="first_2" id="sublabel_2_first" style="min-height:13px">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_2" name="q2_fullName[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 family-name" size="15" data-component="last" aria-labelledby="label_2 sublabel_2_last" required="" value="" /><label class="form-sub-label" for="last_2" id="sublabel_2_last" style="min-height:13px">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_email" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false"> Email Address<span class="form-required">*</span> </label>
+        <div id="cid_3" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_3" name="q3_emailAddress" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 email" style="width:30px" size="30" data-component="email" aria-labelledby="label_3 sublabel_input_3" required="" value="" /><label class="form-sub-label" for="input_3" id="sublabel_input_3" style="min-height:13px">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_phone" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4_full"> Phone Number<span class="form-required">*</span> </label>
+        <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_4_full" name="q4_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_4 tel-national" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_4 sublabel_4_masked" required="" value="" /><label class="form-sub-label" for="input_4_full" id="sublabel_4_masked" style="min-height:13px">Please enter a valid phone number.</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> How can I help you? </label>
+        <div id="cid_5" class="form-input-wide" data-layout="half"> <input type="text" id="input_5" name="q5_howCan" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:20px" size="20" data-component="textbox" aria-labelledby="label_5" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" aria-hidden="false"> Business Type </label>
+        <div id="cid_6" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_6" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_0" name="q6_businessType" value="Sole Proprietorship" /><label id="label_input_6_0" for="input_6_0">Sole Proprietorship</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_1" name="q6_businessType" value="Partnership" /><label id="label_input_6_1" for="input_6_1">Partnership</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_2" name="q6_businessType" value="Limited Liability Company (LLC)" /><label id="label_input_6_2" for="input_6_2">Limited Liability Company (LLC)</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_3" name="q6_businessType" value="Corporation" /><label id="label_input_6_3" for="input_6_3">Corporation</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" aria-hidden="false"> Preferred Communication Method<span class="form-required">*</span> </label>
+        <div id="cid_12" class="form-input-wide jf-required" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_12" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_0" name="q12_preferredCommunication" value="Email" required="" /><label id="label_input_12_0" for="input_12_0">Email</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_1" name="q12_preferredCommunication" value="Phone" required="" /><label id="label_input_12_1" for="input_12_1">Phone</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_2" name="q12_preferredCommunication" value="Video Call" required="" /><label id="label_input_12_2" for="input_12_2">Video Call</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_3" name="q12_preferredCommunication" value="In-person Meeting" required="" /><label id="label_input_12_3" for="input_12_3">In-person Meeting</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" aria-hidden="false"> Preferred Payment Method<span class="form-required">*</span> </label>
+        <div id="cid_13" class="form-input-wide jf-required" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_13" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_13" class="form-radio validate[required]" id="input_13_0" name="q13_preferredPayment" value="Bank Transfer" required="" /><label id="label_input_13_0" for="input_13_0">Bank Transfer</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_13" class="form-radio validate[required]" id="input_13_1" name="q13_preferredPayment" value="PayPal" required="" /><label id="label_input_13_1" for="input_13_1">PayPal</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_13" class="form-radio validate[required]" id="input_13_2" name="q13_preferredPayment" value="Venmo" required="" /><label id="label_input_13_2" for="input_13_2">Venmo</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_13" class="form-radio validate[required]" id="input_13_3" name="q13_preferredPayment" value="Cash" required="" /><label id="label_input_13_3" for="input_13_3">Cash</label></span><span class="form-radio-item formRadioOther" style="clear:left"><input type="radio" class="form-radio-other form-radio validate[required]" name="q13_preferredPayment" id="other_13" value="other" tabindex="0" aria-label="Other" /><label id="label_other_13" style="text-indent:0" for="other_13">Other</label><span id="other_13_input" class="other-input-container" style="display:none"><input type="text" class="form-radio-other-input form-textbox" name="q13_preferredPayment[other]" data-otherhint="Other" size="15" id="input_13" data-placeholder="Please type another option here" placeholder="Please type another option here" /></span></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_15">
+        <div id="cid_15" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_15" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "0";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="241578348216058" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='241578348216058'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "241578348216058-241578348216058";
+    }
+  </script>
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>

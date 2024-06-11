@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliseoDev</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"> <!-- Link to your CSS file -->
+  <style>
+    .navbar {
+      background-color: transparent; /* make the navbar transparent */
+    }
+    .navbar-brand,
+    .nav-link {
+      color: rgba(255, 255, 255, 0.726) !important; /* change text color to black */
+    }
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: #00000070 !important; /* change text color to blue on hover */
+    }
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* place the video behind other content */
+    }
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: 50px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .centered-text {
+        
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.808);
+    }
+    .social-icons {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+    .social-icons a {
+      color: rgb(255, 255, 255);
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    .button {
+      background-color: #0000007c;
+      color: rgba(255, 255, 255, 0.842);
+      padding: 15px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgb(20, 7, 0);
+    }
+    .button:hover {
+      background-color: #e4e7ff3d;
+    }
+    .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid rgba(255, 255, 255, 0.651);
+      margin-left: 5px;
+      
+    }
+    
+    body {
+    background-image: url("assets/Business Freelancer (17).png");
+    background-size: 100%
+
+    /* Additional background properties can be added here */
+    
+}
+section {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    h2 {
+      cursor: pointer;
+    }
+    div {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+    div {
+  display: block; /* Change 'none' to 'block' */
+}
+  /* Styling for the dropdown content */
+  .dropdown-content {
+      display: none; /* Initially hide the dropdown content */
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out; /* Smooth transition effect */
+      max-height: 0; /* Initially set max-height to 0 */
+    }
+
+    /* Styling for the dropdown toggle */
+    .dropdown-toggle {
+      cursor: pointer;
+    }
+
+    /* Styling for the dropdown toggle when active */
+    .dropdown-toggle.active + .dropdown-content {
+      display: block; /* Show the dropdown content when the toggle is active */
+      max-height: 200px; /* Set a maximum height for the dropdown content */
+    }
+    
+    /* Styling for the section headings */
+    h1, h2 {
+      color: white; /* Set text color to white */
+    }
+  
+    .dropdown-content {
+      display: none; /* Initially hide the dropdown content */
+      overflow: hidden;
+      transition: max-height 1s ease-in-out; /* Smooth transition effect */
+      max-height: 0; /* Initially set max-height to 0 */
+      color: white; /* Set text color to white */
+    }
+    .dropdown-toggle:hover + .dropdown-content {
+      display: block; /* Show the dropdown content when hovered over */
+      max-height: 200px; /* Set a maximum height for the dropdown content */
+    }
+      /* Style for dropdowns */
+      .dropdown-toggle {
+      cursor: pointer;
+      color: rgb(255, 255, 255); /* Initial color */
+      transition: color 0.3s; /* Smooth transition */
+    }
+
+    /* Change color to white on hover */
+    .dropdown-toggle:hover {
+      color: white;
+    }
+
+    /* Hide dropdown content by default */
+    .dropdown-content {
+      display: none;
+      background-color: #000000;
+      border: 1px solid #ccc;
+      border-top: none;
+      padding: 10px;
+      margin-top: 5px; /* Add some space between dropdowns */
+    }
+
+    /* Show dropdown content when dropdown is active */
+    .dropdown-toggle.active + .dropdown-content {
+      display: block;
+    }
+    .btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  color: #155724; /* Green color */
+  background-color: #fff;
+  border-color: #155724;
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: 'nexa';">
+        <a class="navbar-brand" href="index.html" style="color: rgb(255, 255, 255); margin-right: 40px;">Eliseo Rodriguez</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="margin-right: 40px;">
+                    <a class="nav-link" href="portfolio.html" style="color: rgb(255, 255, 255);">Portfolio</a>
+                </li>
+                <li class="nav-item" style="margin-right: 40px;">
+                    <a class="nav-link" href="aboutme.html" style="color: rgb(255, 255, 255); ">About Me</a>
+                </li>
+                <li class="nav-item" style="margin-right: 40px;">
+                    <a class="nav-link" href="inquiry.html" style="color: rgb(255, 255, 255);">Inquiries</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <!-- LinkedIn Icon -->
+              
+                </li>
+            </ul>
+        </div>
+    </nav>
+  <section class="portfolio-header" style="font-family: Fulls;">
+    <h2 style="font-family: Fulls;">My Portfolio</h2>
+    <p style="color: white;">Check out some of my recent projects</p>
+</section>
+<section class="portfolio-container" style="max-width: 800px; margin: auto; position: relative; ">
+    <a href="https://anchorofhopecounselingllc.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; position: relative; display: block;">
+        <img src="assets/newlew.PNG" alt="My Website" style="max-width: 100%; height: auto; transition: transform 0.3s;">
+        <div class="overlay"></div>
+        <div class="text-overlay" style="font-family: Fulls;" >Anchor Of Hope Therapy</div>
+        <div class="description-overlay">At Anchor of Hope Counseling I am currently in the works for creating their website. This is a new therapy company based in Dallas.
+            While it's still a work in progress,
+          I hope to finish this by july! </div>
+    </a>
+</section>
+
+<section class="portfolio-container" style="max-width: 800px; margin: auto; position: relative; ">
+    <a href="https://RZRKT.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; position: relative; display: block;">
+        <img src="assets/Capture.PNG" alt="My Website" style="max-width: 100%; height: auto; transition: transform 0.3s;">
+        <div class="overlay"></div>
+        <div class="text-overlay" style=" font-family: Fulls;" >R3v3lnt Gym Wear</div>
+        <div class="description-overlay">At R3v3lnt.com, I'm responsible for keeping the website fresh and engaging.
+             As the front-end engineer and web designer, I prioritize both functionality and aesthetics . 
+            Whether I'm updating inventory, managing emails, or adding new features/designs, my goal is to ensure a seamless and enjoyable user experience! </div>
+    </a>
+</section>
+
+
+<section class="portfolio-container" style="max-width: 800px; margin: auto; position: relative; padding-bottom: 150px;">
+    <a href="" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; position: relative; display: block;">
+        <img src="assets/sampic.PNG" alt="My Website" style="max-width: 100%; height: auto; transition: transform 0.3s;">
+        <div class="overlay"></div>
+        <div class="text-overlay" style="font-family: Fulls;" ;>Sam Millsap COMING SOON..</div>
+        <div class="description-overlay">
+      
+            Sam Millsap, a personal coach and influencer, has enlisted me to develop and manage his website, handling all incoming forms and providing ongoing updates and design support. While the website isn't live yet, my role involves ensuring its functionality and aesthetic appeal align with Sam's vision and goals. </div>
+    </a>
+</section>
+
+
+
+<style>.portfolio-container img:hover {
+    transform: scale(1.01);
+    
+}
+.portfolio-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Initially transparent */
+    transition: background-color 0.5s; /* Smooth transition effect */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.portfolio-container:hover .overlay {
+    background-color: rgba(179, 177, 255, 0.822); /* White overlay */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Smooth transition effect */
+}
+
+.portfolio-container:hover .text-overlay {
+    opacity: 1; /* Show text on hover */
+}
+.description-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Smooth transition effect */
+}
+
+.portfolio-container:hover .description-overlay {
+    opacity: 1; /* Show description on hover */
+}
+</style>
+
+
+
+     
+
+    
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
