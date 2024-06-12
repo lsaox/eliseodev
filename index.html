@@ -96,12 +96,52 @@
             </ul>
         </div>
     </nav>
+<!-- Riddle Button -->
+<button type="button" class="btn btn-primary riddle-button" style="position: fixed; bottom: 10px; left: 10px; opacity: 0.75; padding: 3px 6px; font-size: 0.7em;" data-toggle="modal" data-target="#riddleModal">
+    Solve
+</button>
 
+
+<!-- Riddle Modal -->
+<div class="modal fade" id="riddleModal" tabindex="-1" role="dialog" aria-labelledby="riddleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="riddleModalLabel">Exit out of this mini page and see if you can solve the riddle .  Hint: Key Combination</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                In the world of commands, where numbers align, grasp control and let your curiosity shine. With a digit known as few, not the number 2, combine them together to unlock something true.
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container" style="padding-top: 120px; padding-left: 200px;">
         <h1 class="header" style="font-size: 5em; font-family: 'Fulls'; transition: transform 0.3s;">Web Designer</h1>
         <h1 class="header" style="font-size: 5em; font-family: 'Fulls'; transition: transform 0.3s;">Software Engineer</h1>
         <a href="aboutme.html" class="button about-me-button" style="position: absolute; bottom: 90px; right: 188px; padding: 10px 20px; color: #000000; border: none; border-radius: 5px; font-size: 1.5em; cursor: pointer; font-family: 'Fulls'; transition: color 0.5s, transform 0.3s;">About Me</a>
     </div>
+    <div id="congratsMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; text-align: center;">
+        <img src="assets/giphy.gif" alt="Congrats" style="width: 300px; height: auto;">
+        <p style="font-family: 'Fulls'; font-size: 2em; background-color: #ffffff;">Congrats, you solved the riddle!</p>
+    </div>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey && event.key === "3") {
+                showCongratsMessage();
+            }
+        });
+    
+        function showCongratsMessage() {
+            var congratsMessage = document.getElementById("congratsMessage");
+            congratsMessage.style.display = "block";
+            setTimeout(function() {
+                congratsMessage.style.display = "none";
+            }, 5000); // Hide after 5 seconds
+        }
+    </script>
     
     <style>
         .header:hover,
