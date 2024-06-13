@@ -7,6 +7,11 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet"> <!-- Link to your CSS file -->
   <style>
+      /* Add your global CSS styles here */
+      body, html {
+      margin: 0;
+      padding: 0;
+    }
     .navbar {
       background-color: transparent; /* make the navbar transparent */
       
@@ -55,7 +60,7 @@
     position: absolute;
     bottom: 30px;
     right: 30px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: #00000088;
     color: #ffffff9c;
     border: none;
@@ -64,11 +69,32 @@
     cursor: pointer;
 }
 
+.shuffle-button {
+    color: rgba(0, 0, 0, 0.856);
+    background-color: white;
+    border-color: white;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+    padding-right: 20px;
+}
+
+.shuffle-button:hover {
+    background-color: #ffffff3b;
+}
+
+.shuffle-button::before {
+    content: '\203A'; /* Unicode arrow character */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
 
   </style>
 </head>
 <body>
-
 
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: 'nexa';">
@@ -76,7 +102,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+        <button type="button" class="btn btn-primary shuffle-button" style="opacity: .4; margin-right: 10px;" onclick="shuffleBackgroundImages()">
+            Shuffle
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" style="margin-right: 40px;">
@@ -97,7 +125,7 @@
         </div>
     </nav>
 <!-- Riddle Button -->
-<button type="button" class="btn btn-primary riddle-button" style="position: fixed; bottom: 10px; left: 10px; opacity: 0.75; padding: 3px 6px; font-size: 0.7em;" data-toggle="modal" data-target="#riddleModal">
+<button type="button" class="btn btn-primary riddle-button" style="position: fixed; bottom: 10px; left: 10px; opacity: 0.75; padding: 3px 3px; font-size: 0.7em; color: white;" data-toggle="modal" data-target="#riddleModal">
     Solve
 </button>
 
@@ -107,7 +135,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="riddleModalLabel">Exit out of this mini page and see if you can solve the riddle .  Hint: Key Combination</h5>
+                <h5 class="modal-title" id="riddleModalLabel">Exit out of this mini page and see if you can solve the riddle .  I'll give you a hint: Key Combination</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -121,12 +149,75 @@
     <div class="container" style="padding-top: 120px; padding-left: 200px;">
         <h1 class="header" style="font-size: 5em; font-family: 'Fulls'; transition: transform 0.3s;">Web Designer</h1>
         <h1 class="header" style="font-size: 5em; font-family: 'Fulls'; transition: transform 0.3s;">Software Engineer</h1>
-        <a href="aboutme.html" class="button about-me-button" style="position: absolute; bottom: 90px; right: 188px; padding: 10px 20px; color: #000000; border: none; border-radius: 5px; font-size: 1.5em; cursor: pointer; font-family: 'Fulls'; transition: color 0.5s, transform 0.3s;">About Me</a>
+        <a href="aboutme.html" class="button about-me-button" style="position: absolute; bottom: 90px; right: 188px; padding: 10px 20px; color: #000000; border: none; border-radius: 5px; font-size: 1.5em; cursor: pointer; font-family: 'Fulls'; transition: color 0.5s, transform 0.3s;font-family: 'Fulls' ">About Me</a>
     </div>
     <div id="congratsMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; text-align: center;">
         <img src="assets/giphy.gif" alt="Congrats" style="width: 300px; height: auto;">
-        <p style="font-family: 'Fulls'; font-size: 2em; background-color: #ffffff;">Congrats, you solved the riddle!</p>
+        <p style="font-family: 'Fulls'; font-size: 2em; background-color: #ffffff; ">Congrats, you solved the riddle!</p>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Define an array of background image URLs
+        var backgroundImageUrls = [
+        "url('assets/Business Freelancer (26).png')",
+        "url('assets/b1.png')",
+            "url('assets/b2.png')",
+            "url('assets/b3.png')",
+            "url('assets/b4.png')",
+            "url('assets/b5.png')",
+            "url('assets/b6.png')",
+            "url('assets/b7.png')",
+            
+        ];
+    
+        // Function to shuffle the array
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+    
+        // Shuffle the background image URLs
+        function shuffleBackgroundImages() {
+            backgroundImageUrls = shuffleArray(backgroundImageUrls);
+            changeBackgroundImage();
+        }
+    
+        // Set the initial background image
+        var currentBackgroundIndex = 0;
+        document.body.style.backgroundImage = backgroundImageUrls[currentBackgroundIndex];
+    
+        // Function to change the background image periodically
+        function changeBackgroundImage() {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImageUrls.length;
+            document.body.style.backgroundImage = backgroundImageUrls[currentBackgroundIndex];
+        }
+    
+  
+    </script>
+
+
     <script>
         document.addEventListener("keydown", function(event) {
             if (event.ctrlKey && event.key === "3") {
@@ -139,7 +230,7 @@
             congratsMessage.style.display = "block";
             setTimeout(function() {
                 congratsMessage.style.display = "none";
-            }, 5000); // Hide after 5 seconds
+            }, 4000); // Hide after 5 seconds
         }
     </script>
     
